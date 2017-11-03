@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
 				sh 'mvn --version'
-				sh 'jar cvf dist/XMLEngine.war .'
+				sh 'jar cvf /tmp/builds/XMLEngine.war .'
             }
         }
 		stage('Deploy') {
