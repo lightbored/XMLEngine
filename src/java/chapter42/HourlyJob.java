@@ -5,6 +5,8 @@
  */
 package chapter42;
 
+import java.text.SimpleDateFormat;
+
 /**
  *
  * @author light
@@ -13,6 +15,7 @@ public class HourlyJob implements Runnable {
     
     @Override
     public void run() {
-        System.out.println("Hourly job triggered by scheduler");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
+        System.out.println("[" + sdf.format(new java.util.Date()) + "] Hourly job triggered by scheduler");
     }
 }
