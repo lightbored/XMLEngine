@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
 				sh 'mvn --version'
+				sh 'jar cvf dist/XMLEngine.war .'
             }
         }
 		stage('Deploy') {
@@ -11,6 +12,7 @@ pipeline {
 				timeout(time: 3, unit: 'MINUTES') {
                     retry(5) {
                         sh 'pwd'
+						sh 'ls -ltr dist'
                     }
 		        }
 			}
