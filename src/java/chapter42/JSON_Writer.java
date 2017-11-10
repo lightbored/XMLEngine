@@ -38,9 +38,8 @@ public class JSON_Writer {
             
             // Build a dynamic filename
             String file_uid = getUUID();
-            
             String filename = (file_uid + ".json");
-            
+
             // Create a new FileWriter object
             FileWriter fileWriter = new FileWriter(filename);
             
