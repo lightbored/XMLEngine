@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 public class GetData {
     public static void main(String args[]) throws MalformedURLException{
         String inline = "";
-        URL url = new URL("https://jsonplaceholder.typicode.com/users");
+        URL url = new URL("https://us.api.battle.net/wow/character/malganis/Abeyspriest?fields=pets&locale=en_US&apikey=66semsq3ypygh4k9xpwyswz4sunphved");
         try {
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
             conn.setRequestMethod("GET");
